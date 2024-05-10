@@ -61,6 +61,7 @@ class Mainphone extends StatelessWidget {
                       'Ad Lorem sit sit ipsum labore Lorem.',
                       style: Sizes.secondtext,
                     ),
+                    8.height(),
                     Container(
                       width: 318,
                       height: 52,
@@ -96,9 +97,16 @@ class Mainphone extends StatelessWidget {
                 height: 300,
               ),
               20.height(),
-              const Text('TRUSTED BY OVER 10.000+ WORLD`S BEST TEAMS'),
+              const Text.rich(TextSpan(children: [
+                TextSpan(text: 'TRUSTED BY OVER'),
+                TextSpan(
+                    text: ' 10.000+ ',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+                TextSpan(text: 'WORLD`S BEST TEAMS')
+              ])),
               10.height(),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(
                     'assets/images/google.png',
@@ -127,7 +135,7 @@ class Mainphone extends StatelessWidget {
               ),
               20.height(),
               Image.asset(
-                'assets/images/graphe2',
+                'assets/images/graphe2.png',
               ),
               20.height(),
               Firstitem(
@@ -152,6 +160,7 @@ class Mainphone extends StatelessWidget {
                 'Make your work easier',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
+              20.height(),
               Container(
                 width: 70,
                 height: 70,
@@ -243,30 +252,31 @@ class Mainphone extends StatelessWidget {
               const Text('Singer'),
               20.height(),
               Container(
-                  width: double.infinity,
-                  height: 300,
-                  decoration: BoxDecoration(color: Colors.deepPurple),
-                  padding: EdgeInsets.all(20),
-                  child: Column(
-                    children: [
-                      const Text(
-                        'Culpa nulla qui amet ea pariatur sunt anim.',
-                        style: TextStyle(color: Colors.white, fontSize: 30),
-                      ),
-                      20.height(),
-                      Image.asset(
-                        'assets/images/play.png',
-                        height: 53,
-                        width: 180,
-                      ),
-                      20.height(),
-                      Image.asset(
-                        'assets/images/app.png',
-                        height: 53,
-                        width: 180,
-                      ),
-                    ],
-                  ))
+                width: double.infinity,
+                height: 300,
+                decoration: BoxDecoration(color: Colors.deepPurple),
+                padding: EdgeInsets.all(20),
+                child: Column(
+                  children: [
+                    const Text(
+                      'Culpa nulla qui amet ea pariatur sunt anim.',
+                      style: TextStyle(color: Colors.white, fontSize: 30),
+                    ),
+                    20.height(),
+                    Image.asset(
+                      'assets/images/play.png',
+                      height: 53,
+                      width: 180,
+                    ),
+                    20.height(),
+                    Image.asset(
+                      'assets/images/app.png',
+                      height: 53,
+                      width: 180,
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
         ),
